@@ -1,0 +1,351 @@
+\chapter{Introduction}
+
+\label{Chapter01} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+
+\section{Motivation}
+
+\subsection{What is the brain and why do we study it?}
+Humans have been fascinated by their own brains for centuries. The brain is the
+seat of our memories, thoughts, and perception; it is within the brain that our
+complex behaviours are generated. However, we are still far from understanding
+its workings. We know that the brain is composed of a very large number of
+specialised cells called neurons, which are interconnected and form a vast
+network. We know that neurons process our perceptual inputs and generate
+behaviour by passing information through this network, and we know that even a
+slight disruption of this network can have profound consequences on our lives
+and on the way we experience the world, as pathological conditions as diverse as
+Parkinson's disease, aphasia and schizophrenia are caused by specific changes
+that occur within the nervous system. Nevertheless, making sense of all of this
+knowledge, being able to interpret it and make predictions about future
+behaviour using one single model is still far beyond our reach.
+
+Owing to continual technological advances, our knowledge of the brain has
+greatly advanced in the last few decades. We are now able to watch, record and
+alter the activity of single neurons, identify their interconnections and study
+how these relate to behaviour or how they are affected in brain disorders. In
+spite of this, treatment possibilities for many disorders remain limited and we
+still struggle at devising targeted interventions. There is, nevertheless, a
+general feeling among many in the field that we are currently on the cusp of a
+new big leap in our understanding of the brain and several large research
+initiatives focused on the brain have been recently unveiled to make this leap
+possible\footnote{Human Brain Project (\url{https://www.humanbrainproject.eu}),
+BRAIN Initiative (\url{https://www.braininitiative.nih.gov}), Brain/MINDS
+(\url{http://brainminds.jp/en}), among others.}. These have complementary goals:
+Some focus on developing new techniques to study the structure and function of
+the brain, other on analytical procedures and data storage or on mapping the
+brain of a specific species in great detail.
+
+During my doctoral studies, I focused on studying the activity and structure of
+the rodent brain using a medical imaging technique called magnetic resonance
+imaging (MRI), and in the following sections I will briefly introduce the type
+of questions that I have addressed in my research. 
+
+\subsection{How do we measure brain activity?}
+
+MRI is a medical imaging technique that is capable of producing images of the whole
+brain. It does so by making use of magnetic properties of hydrogen nuclei
+present throughout the body in the form of water molecules. The technique is
+non-invasive and its images have a very good contrast between soft tissues,
+such as between a tumour and its surroundings or between grey and white matter
+of the brain. These properties have made MRI popular among clinicians and the
+technique has become ubiquitous in modern day clinical practice
+\parencite{westbrook2011}.
+
+However, neuroscientists are not interested only in the structure of brain; they
+are just as much interested in studying its activity and function: Is region~A
+activated by a sensory stimulus~B? Is the performance of a subject in task~C
+affected when region~D is stimulated or inhibited? Do people with disease~E show
+reduced activity in region~F?
+
+A classical approach to measuring the activity of a neuron is to implant a
+microelectrode into the brain and take advantage of how changes in the electric
+potential across the neuron's membrane encode the state of the neuron
+\parencite{hubel1959, adrian1928}. However, this technique is invasive and
+records the activity of a single neuron. Another technique called
+electroencephalography (EEG) records the combined electrical activity of neurons
+at the surface of the skull. While this technique is non-invasive, its spatial
+resolution and sensitivity to neurons that are located deeper in the brain are
+limited \parencite{jackson2014}. Currently, the most popular technique to study
+brain function is based on the following observation: When neurons in a
+particular region of the brain are active, the flow of oxygenated blood into
+that region increases in order to deliver the fuel required by the active
+neurons, and the change in the balance in concentration between oxygenated and
+deoxygenated blood results in an increase of the MR signal coming from that
+particular area \parencite{ogawa1990}. Therefore, in order to identify regions
+of high or low neuronal activity, we need to repeatedly and in short intervals
+acquire MR images of a subject's brain and track changes in MR signal across
+different brain structures. This approach was further developed and resulted in
+the introduction of blood-oxygen-level dependent functional MRI (BOLD fMRI) in
+the early 1990s \parencite{bandettini1992,kwong1992}. In fMRI, the brain is
+divided into small cubes called voxels and one can infer the activation time
+series for each of these voxels individually. The spatial resolution of the
+method is therefore better than that of EEG and now reaches submillimeter
+values. However, its sampling frequency is relatively low at around one sample
+per second, and it can by no means measure the activity of a single neuron: Its
+signal is a proxy for the combined activity of all neurons in the selected
+voxel convolved with the complex hemodynamic response.
+
+Functional MRI has quickly become popular among neuroscientists, especially
+because of its non-invasiveness and whole-brain coverage. A typical fMRI
+experimental paradigm aims at identifying associations between sensory
+stimulation or task performance and increased neuronal activity in specific
+brain regions \parencite{friston1994}. Periods of activity are usually
+interleaved with periods of rest during which the subject lies in an MRI scanner
+with no overt task or sensory stimulation. By comparing the activity in
+individual brain regions in all segments of the acquisition, researchers can
+identify those regions that show statistically significant increases when the
+subject is performing the task compared to the resting baseline. A large number
+evoked activations were studied in this way and a number task- or
+sensory-specific networks of co-activating regions have been identified.  These
+studies have greatly advanced our knowledge of the functional organization of
+the brain \parencite{poldrack2015a}.
+
+\subsection{What does the brain do when we are at rest?}
+
+The type of experiments described in the preceding paragraph paints a very
+``reflexive'' picture of the brain: It sits around not doing much unless it is
+externally stimulated or unless it is involved in an externally directed task.
+However, there are many observations that contradict such a view of brain
+function and instead suggest a brain that is constantly buzzing with activity
+\parencite{raichle2010}. One of these observations is the relatively high
+energy consumption of the brain that only fractionally increases during task
+performance \parencite{raichle2015}. Moreover, spontaneous activity is clearly
+visible on EEG and fMRI scans acquired during periods of rest and this activity
+shows signs of non-random organization across brain regions which goes beyond
+simple monosynaptic axonal connectivity \parencite{fox2007}.
+
+If the ``reflexive'' function of the brain constitutes only a small fraction of
+its activity, how can we uncover and interpret the intrinsic activity? This has
+been the object of research within the fMRI community ever since the first
+description of non-random organization of the resting-state fMRI (rsfMRI)
+signal within the human motor cortex \parencite{biswal1995}. An important step
+in this direction has been the observation that networks of regions whose
+activity time series are correlated at rest correspond to networks of
+co-activated regions elicited during task performance \parencite{smith2009,
+crossley2013}. Several explanations for this phenomenon have been put forward,
+including learning consolidation, preparation for task performance and
+synchronization based on Hebbian-style reinforcement mechanisms, although the
+evidence for the time being remains inconclusive \parencite{power2014}. The
+observation of specifically organized brain activity at rest has nevertheless
+marked a paradigm shift in neuroimaging and there has been a continual increase
+in the application of rsfMRI to the study of brain organization
+\parencite{snyder2012}. 
+
+\subsection{What is a connectome? How is it affected in brain disorders? Can it
+help us better understand or diagnose these disorders?}
+
+The shift from task-evoked to resting-state fMRI has brought about also a shift
+in the way the fMRI signal is analysed. A growing number of studies started to
+study brain's intrinsic activity from the perspective of mathematical graphs or
+networks: The brain is represented as a network of interconnected functional
+regions \parencite{bullmore2009}. The strength of a connection between two
+regions can be expressed as the degree to which the intrinsic activity in those
+two regions is similar and is commonly referred to as ``functional
+connectivity'' \parencite{friston2011}. Such a representation of the brain is
+also referred to as the ``connectome'' \parencite{smith2013} and it is useful
+both from the data analysis perspective -- the underlying field of network
+analysis has burgeoned recently, too, and it provides a large number of useful
+analytical tools -- and from the interpretative perspective -- as it is closer
+to the actual architecture of the brain.
+
+Recent studies have revealed two defining characteristics of human functional
+connectomes. First, their nodes can be reliably partitioned into densely
+connected clusters called modules or communities, most of which typically
+replicate previously described functional systems of the brain
+\parencite{power2011, yeo2011}. Second, there exist a limited set of nodes
+called hubs that act as integrators between these systems and that are crucial
+for the coordinated involvement of multiple systems in complex behaviors
+\parencite{vandenheuvel2013}.
+
+Connectomic studies have not only provided insights into the organization of the
+healthy brain, but also led to observations of altered brain connectivity in a
+number of brain disorders disorders: deficient connectivity of the prefrontal
+cortex in schizophrenia \parencite{anticevic2013a}, widespread over- and
+underconnectivity in autism spectrum disorders \parencite{dimartino2014a}, and
+many others \parencite{crossley2014,buckner2009}. This area of research, also
+referred to as ``pathoconnectomics'' \parencite{rubinov2013}, has seen an
+especially large following, with the objective to help diagnosis, devise
+measurable biomarkers, and better understand their genetic or environmental
+underpinnings \parencite{castellanos2013, khalili-mahani2017}.
+
+However, connectomic approaches to studying and diagnosing brain disorders still
+face several challenges before widespread adoption can take place. Moreover,
+many of these challenges have been used to argue against the use of
+neuroimaging-based findings in clinical practice \parencite{weinberger2016}. For
+example, there are inconsistencies across studies in connectivity alterations
+observed for a specific disorder. These disparities and potential lack of
+replicability may be attributable to several factors, including clinical
+heterogeneity of the patient groups, imaging parameters, analytical procedures
+and inadequate correction of other confounding factors such as motion or
+cross-site differences \parencite{filippi2016, marchitelli2016, power2015}. As
+pathoconnectomics is still a nascent field, several of these may come into play
+in a single study and therefore it is imperative that the community gives them
+full attention. Current developments, such as the use of registered reports
+\parencite{chambers2013} and increased data and code sharing
+\parencite{poldrack2017}, may help address some of the issues regarding the
+general replicability of findings, by allowing the readers to distinguish
+\textit{a priori} from \textit{post hoc} analyses and to potentially re-run some
+of the analyses, and by allowing the researchers to replicate their results on
+comparable datasets acquired elsewhere and to test their new analytical methods
+on larger datasets.
+
+\subsection{Autism spectrum disorders}
+
+While many brain disorders -- neurological, psychiatric and developmental --
+have been studied using neuroimaging techniques, in this thesis we will focus
+specifically on autism spectrum disorders (ASD). Autism is a heterogeneous
+syndrome characterised by core behavioural features including deficits in social
+communication and interaction, as well as restricted, repetitive patterns of
+behaviour, interests and activities \parencite{association2013}. Individuals
+with ASD can also present several other commorbidities, such as intellectual
+disability and epilepsy \parencite{zafeiriou2007, bauman2010}. While the typical
+age of diagnosis used to be around 3-4 years, current efforts aim at a
+much earlier diagnosis in order to allow for early intervention
+\parencite{lai2014}. Nevertheless, the disorder continues to represent a
+considerable burden to affected individuals, their immediate family and public
+healthcare systems. 
+
+Although a primary and unitary aetiology for ASD has not been identified, its
+high heritability has been consistently documented across a series of twin
+studies \parencite{tick2016}, revealing a contribution of complex and highly
+heterogeneous genetic mutations \parencite{geschwind2009, geschwind2015,
+sanders2015}. Remarkably, although previously identified mutations, genetic
+syndromes and de novo copy number variations (CNVs) account for about 10–20 \%
+of ASD cases, none of these single known genetic causes accounts for more than
+1–2 \% of cases [reviewed in \parencite{abrahams2008}], making heterogeneity a
+major hallmark of the disorder \parencite{betancur2011}. Nevertheless, the
+advances in identification of autism-risk genes led to renewed interest in
+studying the underlying neurobiology of the disorder and several major cellular
+pathways have been shown to be affected, including transcription and chromatin
+regulation, synapse development, and signal transduction
+\parencite{sanders2015b, kleijer2017}. 
+
+Concurrently, the advent of non-invasive brain imaging raised hopes that the
+clinical heterogeneity of ASD could be narrowed down to a smaller number of
+identifiable ``imaging endophenotypes'' that could help ASD diagnosis, patient
+stratification, and possibly provide clues as to the elusive aetiology of this
+group of disorders \parencite{geschwind2015, gottesman2003}. While several
+initial studies focused on brain overgrowth as a potential early indicator of
+autism \parencite{courchesne2002, lange2015, ecker2017}, a large number of
+studies have since considered functional connectivity disruptions in individuals
+with ASD, following early reports of reduced brain connectivity identified using
+positron-emission tomography [PET, \parencite{horwitz1988}], later corroborated
+by investigations with task-based \parencite{just2004} and resting-state fMRI
+\parencite{assaf2010, cherkassky2006, kennedy2008}. The extensive literature
+published to date points at the presence of major functional connectivity
+alterations in ASD populations, although the identified regional patterns vary
+considerably across studies and patient cohorts \parencite{ameis2015,
+bernhardt2016, ecker2014, ecker2015, kana2011, muller2014, vasa2016}. These
+results are intriguing as they are consistent with the observation that many
+autism-risk genes are involved in synapse development and function: Aberrations
+in these genes might lead to perturbations of neural connectivity, which in turn
+could result in aberrant large-scale functional connectivity \parencite{ecker2017}. 
+
+\subsection{Can animal research be of any value in pathoconnectomics?}
+
+Do connectivity disruptions cause brain disorders or are they a mere by-product
+of brain dysfunction? Can we identify possible genetic contributions to this
+phenomenon? What is the neural basis that underpins connectivity disruptions? Is
+functional connectivity disruption associated with aberrant structural
+connectivity?
+
+Despite intensive human connectomic research, many fundamental questions about
+the nature of connectivity disruptions in brain disease remain open. This may be
+due to the fact that there currently exists a disconnect between the studies of
+large-scale organization of the human brain with techniques such as MRI and EEG,
+and the research at the level of genes, neurons and microcircuits performed in
+laboratory animals. Let us consider the case of ASD: Despite some obvious
+limitations in reliably modeling the full phenotypic spectrum of such a complex
+developmental disorder, mouse models have played a central role in advancing our
+basic mechanistic and molecular understanding of the disorder
+\parencite{silverman2010a, delatorre-ubieta2016}. Therefore, a deeper
+understanding of the complex pathophysiological cascade leading to aberrant
+connectivity in ASD can greatly benefit from the use of the mouse, where
+individual pathophysiological or phenotypic components of the spectrum can be
+recreated and investigated via approaches that are either off limits or
+confounded by clinical heterogeneity \parencite{nestler2010}. The use of the
+mouse may also help us address some of the more technical challenges of human
+connectomic research discussed above: motion can be very well controlled and
+rs-fMRI measurements can be complemented by other brain activity readouts, such
+as by measuring local field potentials (LFP).  Moreover, there is an increasing
+number of publicly available resources with rich data about the mouse brain,
+including high-resolution gene expression and neural circuitry datasets produced
+by the Allen Institute for Brain
+Science\footnote{\url{http://www.brain-map.org/}} \parencite{lein2007, oh2014},
+which pave the way for multimodal investigations and more refined biological
+interpretations of connectomic findings \parencite{konopka2017,
+vandenheuvel2016}. Taken together, research in the mouse allows for combined
+investigations of microscopic and macroscopic findings, which are currently
+called for in the field of autism research \parencite{ecker2017}.
+
+However, while initial rsfMRI experiments in the mouse proved promising
+\parencite{sforazzini2014}, before we can readily translate the knowledge across
+the two species, we need to learn more about the large-scale organization of the
+mouse brain and ascertain that -- at least to some extent -- it does replicate
+fundamental features of the human brain connectome, such as the presence of
+functional networks and hubs and their impairment in pathological states
+\parencite{vandenheuvel2016a}. Similarly, methods that are used in human
+research to identify points of disruptions need to be first tested in the mouse
+before they can be applied to study disease models. It is these research
+questions that formed the basis of my doctoral studies and that are discussed in
+the following chapters of this thesis.
+
+\section{Structure and main contributions of the thesis}
+
+\paragraph{Chapter~\ref{Chapter02}} We build upon initial applications of rsfMRI to the
+mouse by describing large-scale functional organization of a mouse brain.
+Specifically, we apply a fully-weighted network analysis (1) to map
+whole-brain intrinsic functional connectivity (i.e., the functional connectome)
+at a high-resolution voxel scale and (2), to spatially locate functional
+connectivity hubs in the mouse brain. Analysis of this large rsfMRI dataset
+revealed the presence of six distinct functional modules related to known
+large-scale functional partitions of the brain, including a default-mode network
+(DMN). Consistent with human studies, highly-connected functional hubs were
+identified in several sub-regions of the DMN, including the anterior and
+posterior cingulate and prefrontal cortices, in the thalamus, and in small foci
+within well-known integrative cortical structures such as the insular and
+temporal association cortices. According to their integrative role, the
+identified hubs exhibited mutual preferential interconnections. These findings
+highlight the presence of evolutionarily-conserved, mutually-interconnected
+functional hubs in the mouse brain, and may guide future investigations of the
+biological foundations of aberrant rsfMRI hub connectivity associated with brain
+pathological states.
+
+\paragraph{Chapter~\ref{Chapter03}} We apply the methods developed in the
+previous study to investigate functional connectivity, its aberrations and their
+potential neurobiological underpinnings in mice lacking contactin associated
+protein-like 2 (\textit{Cntnap2}). Homozygous mutations in CNTNAP2, a
+neurexin-related cell-adhesion protein, are strongly linked to autism and
+epilepsy in humans.  Importantly, the mouse model employed in this study
+recapitulates not only the high-confidence ASD mutation, but also many
+behavioural and neurobiological traits seen in human carriers of the same
+mutation. Moreover, common genetic variants in CNTNAP2 were recently described
+to be associated with impaired frontal lobe connectivity in humans, allowing
+therefore for a direct comparison of our investigations with findings in humans.
+Here we used rsfMRI to show that homozygous mice lacking \textit{Cntnap2}
+exhibit reduced long-range and local functional connectivity in prefrontal and
+midline brain ``connectivity hubs.''Long-range rsfMRI connectivity impairments
+affected heteromodal cortical regions and were prominent between
+fronto-posterior components of the mouse default-mode network, an effect that
+was associated with reduced social investigation, a core ``autism trait'' in
+mice. Notably, viral tracing revealed reduced frequency of prefrontal-projecting
+neural clusters in the cingulate cortex of \textit{Cntnap2}$^{-/-}$ mutants,
+suggesting a possible contribution of defective mesoscale axonal wiring to the
+observed functional impairments. Macroscale cortico-cortical white-matter
+organization appeared to be otherwise preserved in these animals. These findings
+reveal a key contribution of ASD-associated gene CNTNAP2 in modulating
+macroscale functional connectivity, and suggest that homozygous loss-of-function
+mutations in this gene may predispose to neurodevelopmental disorders and autism
+through a selective dysregulation of connectivity in integrative prefrontal
+areas.
+
+\paragraph{Chapter~\ref{Chapter04}} We discuss recent progress in mouse brain
+connectivity mapping via rsfMRI in the context of autism connectivity research
+and show its growing potential to generate and test mechanistic hypotheses about
+the elusive origin and significance of connectional aberrations observed in
+autism. Furthermore, we describe initial examples of how the approach can be
+employed to establish causal links between ASD-related mutations, developmental
+processes, and brain connectional architecture.
+
+\paragraph{Chapter~\ref{Chapter05}} In this final chapter we summarize the
+findings of this thesis and discuss future directions.
